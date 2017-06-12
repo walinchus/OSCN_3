@@ -56,7 +56,7 @@ for frm in br.forms():
 br.select_form(nr=0)
 print br.form
 br['db'] = ['garfield']
-br['dcct'] = ['40']
+br['dcct'] = ['31']
 print br
 response = br.submit()
 print response
