@@ -57,7 +57,7 @@ br.select_form(nr=0)
 print br.form
 br['db'] = ['garfield']
 br['dcct'] = ['31']
-br['FileDateL'] = ['01/01/2011']
+br['FiledDateL'] = ['01/01/2011']
 print br
 response = br.submit()
 print response
