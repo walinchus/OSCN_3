@@ -59,6 +59,7 @@ br['db'] = ['garfield']
 br['dcct'] = ['40']
 print br
 response = br.submit()
+print response
 html = response.read()
 print html
 root = lxml.html.fromstring(html)
