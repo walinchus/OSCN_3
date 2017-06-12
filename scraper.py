@@ -22,7 +22,7 @@ def scrape_table(root):
             #this line adds 1 to the ID no. we set at 0 earlier
             #idno=idno+1
             #record['ID'] = idno 
-            List_of_FileDates = table_cells[1].textcontent()
+            List_of_FileDates = [table_cells[1].textcontent()]
             Last_Date_Filed = List_of_FileDates[-1]
             print Last_Date_Filed, "is the last date filed."
             record['Caption'] = table_cells[2].text_content()
