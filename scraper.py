@@ -22,6 +22,9 @@ def scrape_table(root):
             #this line adds 1 to the ID no. we set at 0 earlier
             #idno=idno+1
             #record['ID'] = idno 
+            List_of_FileDates = table_cells[1].textcontent()
+            Last_Date_Filed = List_of_FileDates[-1]
+            print Last_Date_Filed, "is the last date filed."
             record['Caption'] = table_cells[2].text_content()
             record['Found Party'] = table_cells[3].text_content()
             table_cellsurls = table_cells[0].cssselect("a")
@@ -31,8 +34,7 @@ def scrape_table(root):
             print record, '------------'
             # Save the record to the datastore - 'ID' is our unique key - 
             scraperwiki.sqlite.save(["Case Number"], record)
-            date_start = len(record['Date Filed'])[-1]
-            print date_start
+            
 
 
 
