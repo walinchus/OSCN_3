@@ -31,6 +31,8 @@ def scrape_table(root):
             print record, '------------'
             # Save the record to the datastore - 'ID' is our unique key - 
             scraperwiki.sqlite.save(["Case Number"], record)
+            date_start = len(record['Date Filed'])[-1]
+            print date_start
 
 
 
