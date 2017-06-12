@@ -6,7 +6,7 @@ import mechanize
 
 def scrape_table(root):
     #grab all table rows <tr> in table class="tblSearchResults"
-    rows = root.cssselect("table.caseCourtTable tr")
+    rows = root.cssselect("table.sized.results tr")
     #create an ID number set at 0 - will add 1 every time we store a record (below)
     idno = 0
     #create a record to hold the data
